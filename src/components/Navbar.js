@@ -6,21 +6,22 @@ import '../style/Mode.css';
 export default function Navbar(props) {
 
     function show(){
-        let navmenu = document.getElementById('nav').firstElementChild.children;
-
-        let menuline = document.getElementById('nav').lastElementChild;
-        menuline.classList.toggle('change');
-
-        if (navmenu[1].style.display!=='block'){
-            document.getElementById("nav").style.height = '200px';
-            for (let i = 1; i < navmenu.length; i++) {
-                navmenu[i].style.display = 'block';
+        if (window.innerWidth<='700'){
+            let navmenu = document.getElementById('nav').firstElementChild.children;
+            let menuline = document.getElementById('nav').lastElementChild;
+            menuline.classList.toggle('change');
+            
+            if (navmenu[1].style.display!=='block'){
+                document.getElementById("nav").style.height = '200px';
+                for (let i = 1; i < navmenu.length; i++) {
+                    navmenu[i].style.display = 'block';
+                }
             }
-        }
-        else{
-            document.getElementById("nav").style.height = '50px';
-            for (let i = 1; i < navmenu.length; i++) {
-                navmenu[i].style.display = 'none';
+            else {
+                document.getElementById("nav").style.height = '50px';
+                for (let i = 1; i < navmenu.length; i++) {
+                    navmenu[i].style.display = 'none';
+                }
             }
         }
     }
@@ -29,8 +30,8 @@ export default function Navbar(props) {
         <div className={`navbar nav-${props.mode}`} id="nav">
             <div>
                 <button className="brand">{props.logo}</button>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
+                <Link to="/" onClick={show}>Home</Link>
+                <Link to="/about" onClick={show}>About</Link>
                 <div className="modeToggle" >
                     <label className="switch" id="switch">
                         <input type="checkbox" onClick={props.toggleMode}/>

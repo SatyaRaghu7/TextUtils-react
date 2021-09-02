@@ -35,7 +35,7 @@ function App() {
           <Textarea heading="Enter Your Text Below" mode={mode}/>
         </Route>
         <Route exact path="/about">
-          <About/>
+          <About mode={mode}/>
         </Route>
       </Switch>
       <Footer mode={mode}/>
