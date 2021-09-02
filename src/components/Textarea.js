@@ -55,25 +55,25 @@ export default function Textarea(props){
     }
 
     return(
-        <>
-        <div className={`textarea textarea-${props.mode}`}>
-            <h2>{props.heading}</h2>
-            <textarea className={`mytextarea mytextarea-${props.mode}`} value={text} onChange={handleOnChange} id="myBox" rows="12"></textarea>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={upperCase}>Upper Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={lowerCase}>Lower Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={sentenceCase}>Sentence Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={copy}>Copy</button>
-            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={clearTextArea}>Clear</button>
+        <div className="textgrid">
+            <div className={`textarea textarea-${props.mode}`}>
+                <h2>{props.heading}</h2>
+                <textarea className={`mytextarea mytextarea-${props.mode}`} value={text} onChange={handleOnChange} id="myBox" rows="12"></textarea>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={upperCase}>Upper Case</button>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={lowerCase}>Lower Case</button>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={sentenceCase}>Sentence Case</button>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={copy}>Copy</button>
+                <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={clearTextArea}>Clear</button>
+            </div>
+            <div className={`textarea textarea-${props.mode}`}>
+                <p style={wordcount}>Total Words <span>{text.replace(/\s+/g, ' ').split(' ').filter((e)=>{return e.length!==0}).length}</span> and Letters <span>{text.length}</span></p>
+                <p>Minutes to read: <span>{text.replace(/\s+/g, ' ').split(' ').filter((e)=>{return e.length!==0}).length/250}</span></p>
+            </div>
+            <div className={`textarea textarea-${props.mode}`}>
+                <h3>Preview</h3>
+                <p className="preview">{text.length>0?text:'Type Something To get Preview'}</p>
+            </div>
         </div>
-        <div className={`textarea textarea-${props.mode}`}>
-            <p style={wordcount}>Total Words <span>{text.replace(/\s+/g, ' ').split(' ').filter((e)=>{return e.length!==0}).length}</span> and Letters <span>{text.length}</span></p>
-            <p>Minutes to read: <span>{text.replace(/\s+/g, ' ').split(' ').filter((e)=>{return e.length!==0}).length/250}</span></p>
-        </div>
-        <div className={`textarea textarea-${props.mode}`}>
-            <h3>Preview</h3>
-            <p className="preview">{text.length>0?text:'Type Something To get Preview'}</p>
-        </div>
-        </>
     )
 }

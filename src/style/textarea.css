@@ -83,6 +83,13 @@
   }
 
   @media screen and (max-width:700px) {
+    .textgrid {
+      margin-top: 12vh;
+    }
+    
+    .mytextarea{
+        font-size: 15px;
+    }
     .preview {
         width: 90%;
         overflow-wrap: break-word;
@@ -90,7 +97,4 @@
         height: 31vh;
     }
 
-    .mytextarea{
-        font-size: 15px;
-    }
   }

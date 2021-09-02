@@ -71,6 +71,21 @@ span {
 }
 
 @media screen and (max-width: 700px) {
+  *{
+    font-size: 15px;
+  }
+  body::-webkit-scrollbar{
+    display: none;
+  }
+  /* add transition navbar */
+  .navbar{
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
   .brand, .navbar a {
     float: none;
     text-align: left;
@@ -78,13 +93,6 @@ span {
     width: 100%;
   }
   .navbar a:not(:first-child){
-    display: none;
-  }
-
-  *{
-    font-size: 15px;
-  }
-  body::-webkit-scrollbar{
     display: none;
   }
 
