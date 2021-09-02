@@ -34,8 +34,8 @@
     /* transition: .1s; */
   }
   .mytextarea-dark{
-    border-color: #333;
-    background-color: #777;
+    border-color: rgb(180, 178, 178);
+    background-color: rgb(39, 32, 32);
     color: rgb(216, 216, 216);
     /* transition: .1s; */
   }
