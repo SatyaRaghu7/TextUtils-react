@@ -59,12 +59,12 @@ export default function Textarea(props){
         <div className={`textarea textarea-${props.mode}`}>
             <h2>{props.heading}</h2>
             <textarea className={`mytextarea mytextarea-${props.mode}`} value={text} onChange={handleOnChange} id="myBox" rows="12"></textarea>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={upperCase}>Upper Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={lowerCase}>Lower Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={sentenceCase}>Sentence Case</button>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={copy}>Copy</button>
-            <button className={`casebtn casebtn-${props.mode}`} onClick={clearTextArea}>Clear</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={upperCase}>Upper Case</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={lowerCase}>Lower Case</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={sentenceCase}>Sentence Case</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={copy}>Copy</button>
+            <button className={`casebtn casebtn-${props.mode}`} disabled={text.length===0} onClick={clearTextArea}>Clear</button>
         </div>
         <div className={`textarea textarea-${props.mode}`}>
             <p style={wordcount}>Total Words <span>{text.replace(/\s+/g, ' ').split(' ').filter((e)=>{return e.length!==0}).length}</span> and Letters <span>{text.length}</span></p>
