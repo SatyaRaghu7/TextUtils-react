@@ -4,12 +4,14 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Textarea from './components/Textarea';
 import Footer from './components/Footer';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// import About from './components/About';
+
+// for routing
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState('light');
@@ -28,18 +30,18 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar logo="TextUtils" mode={mode} modeText={modeText} toggleMode={toggleMode}/>
-      <Switch>
-        <Route exact path="/">
+      {/* <Switch>
+        <Route exact path="/"> */}
           <Textarea heading="Enter Your Text Below" mode={mode}/>
-        </Route>
+        {/* </Route>
         <Route exact path="/about">
           <About mode={mode}/>
         </Route>
-      </Switch>
+      </Switch> */}
       <Footer mode={mode}/>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }

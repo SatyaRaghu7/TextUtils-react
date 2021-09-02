@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    {/* <HashRouter> //for github routing and at this time i am not going to routing */}
       <App />
-    </HashRouter>
+    {/* </HashRouter> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

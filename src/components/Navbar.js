@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import '../style/menulines.css';
 import '../style/Mode.css';
 
@@ -46,8 +46,9 @@ export default function Navbar(props) {
         <div className={`navbar nav-${props.mode}`} id="nav">
             <div>
                 <button className="brand">{props.logo}</button>
-                <Link to="/" onClick={show}>Home</Link>
-                <Link to="/about" onClick={show}>About</Link>
+                <a href="/#" onClick={show}>Home</a>
+                {/* <Link to="/" onClick={show}>Home</Link>
+                <Link to="/about" onClick={show}>About</Link> */}
                 <div className="modeToggle" >
                     <label className="switch" id="switch">
                         <input type="checkbox" onClick={props.toggleMode}/>
