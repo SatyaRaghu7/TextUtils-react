@@ -27,14 +27,17 @@ export default function Navbar(props) {
     }
 
     document.addEventListener('mouseup', function(e){
-        let navmenu = document.getElementById('nav').firstElementChild.children;
-        let nav = document.getElementById('nav');
-        let menuline = document.getElementById('nav').lastElementChild;
-        if (!nav.contains(e.target)){
-            nav.style.height = '50px';
-            menuline.classList.remove('change');
-            for (let i = 1; i < navmenu.length; i++) {
-                navmenu[i].style.display = 'none';
+        if (window.innerWidth<='700'){
+
+            let navmenu = document.getElementById('nav').firstElementChild.children;
+            let nav = document.getElementById('nav');
+            let menuline = document.getElementById('nav').lastElementChild;
+            if (!nav.contains(e.target)){
+                nav.style.height = '50px';
+                menuline.classList.remove('change');
+                for (let i = 1; i < navmenu.length; i++) {
+                    navmenu[i].style.display = 'none';
+                }
             }
         }
     })
