@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.nav-dark{
+  background-color: #333;
+}
+.nav-light{
+  background-color: #f1f1f1;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+
+.nav-dark a {
+  color: #f2f2f2;
+}
+.nav-light a {
+  color: #444;
+}
+
+.nav-dark a:hover{
+  color: black;
+  background-color: #ddd;
+}
+.nav-light a:hover{
+  color: #ddd;
+  background-color: black;
+}
+
+.brand {
+  float: left;
+  color: rgb(240, 128, 128);
+  background: inherit;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 13px 16px;
+  font-family: cursive;
+  transition: 0.1s;
+}
+
+span {
+  font-weight: bold;
+}
+
+.modeToggle {
+  float: right;
+  position: relative;
+  top: 15px;
+  right: 10px;
+}
+.modeText{
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .brand, .navbar a {
+    float: none;
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+  .navbar a:not(:first-child){
+    display: none;
+  }
+
+  *{
+    font-size: 15px;
+  }
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
+  .modeToggle{
+    display: none;
+    float: none;
+    position: relative;
+    left: 20px;
+  }
+  .modeText{
+    display: inline;
+    position: absolute !important;
+    width: 75vw;
+    left: 55px;
+    font-weight: normal;
+  }
+  .modeText-dark{
+    color: #f2f2f2;
+  }
+  .modeText-light{
+    color: #444;
+  }
+}

@@ -1,0 +1,14 @@
+.container{
+    min-height: 88vh;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* .container-light{
+
+} */
+
+.container-dark {
+    color: #555;
+}

@@ -1,0 +1,96 @@
+.textarea {
+    width: 80%;
+    margin: 20px auto;
+    /* transition: 0.1s; */
+  }
+  
+  .textarea-dark{
+    background-color: #555;
+    color: rgb(216, 216, 216);
+    /* transition: 0.1s; */
+  }
+  .textarea-light{
+    background-color: white;
+    color: black;
+    /* transition: .1s; */
+  }
+
+  .textarea h2{
+    text-align: center;
+  }
+
+  .mytextarea {
+    width: 100%;
+    border-color: blue;
+    margin-top: 10px;
+    font-size: 20px;
+    outline: none;
+    min-height: 30vh;
+    max-height: 50vh;
+    min-width: 70vw;
+    max-width: 80vw;
+    font-family: cursive;
+    padding: 10px;
+    /* transition: .1s; */
+  }
+  .mytextarea-dark{
+    border-color: #333;
+    background-color: #777;
+    color: rgb(216, 216, 216);
+    /* transition: .1s; */
+  }
+  .mytextarea-light{
+    border-color: blue;
+    /* transition: .1s; */
+  }
+  .casebtn{  
+    font-size: 16px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 7px;
+  }
+  .casebtn-light{
+    background-color: rgb(152, 171, 255);
+  }
+  .casebtn-dark{
+    background-color: #777;
+    color: #f1f1f1;
+  }
+  
+  .casebtn-light:hover{
+    background-color: rgb(109, 136, 255);
+  }
+  .casebtn-dark:hover{
+    background-color: #888;
+    color: #f2f2f2;
+  }
+  .preview{
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    max-height: 40vh;
+    min-height: 27vh;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+  }
+  .preview::-webkit-scrollbar {
+    display: none;
+  }
+  .preview {
+    -ms-overflow-style: none;  /*IE, Edge*/
+    scrollbar-width: none;  /*Firefox*/
+  }
+
+  @media screen and (max-width:700px) {
+    .preview {
+        width: 90%;
+        overflow-wrap: break-word;
+        max-width: 630px;
+        height: 31vh;
+    }
+
+    .mytextarea{
+        font-size: 15px;
+    }
+  }

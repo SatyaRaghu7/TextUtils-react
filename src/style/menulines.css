@@ -1,0 +1,44 @@
+.menulines{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    transition: 0.5s;
+}
+
+.first, .second, .third{
+    width: 23px;
+    height: 3px;
+    background-color: rgb(66, 65, 65);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.dark{
+    background-color: white;
+}
+
+.light{
+    background-color: rgb(66, 65, 65);
+}
+
+.change .first{
+    -webkit-transform: rotate(-45deg) translate(-2px, 4px);
+    transform: rotate(-45deg) translate(-2px, 4px);
+    background-color: rgb(240, 128, 128);
+}
+
+.change .second{
+    opacity: 0;
+}
+
+.change .third{
+    -webkit-transform: rotate(45deg) translate(-7px, -8px);
+    transform: rotate(45deg) translate(-7px, -8px);
+    background-color: rgb(240, 128, 128);
+}
+
+@media screen and (max-width:700px) {
+    .menulines{display: inline-block;}
+}

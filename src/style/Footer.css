@@ -1,0 +1,28 @@
+.footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.1s;
+}
+
+.footer-dark{
+    background-color: #333;
+    color: rgb(189, 188, 188);
+}
+
+.footer-light{
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+@media screen and (min-height:1100px) {
+  .footer {
+      position: absolute; 
+      bottom: 0;
+    }
+}
