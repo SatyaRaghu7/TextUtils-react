@@ -5,13 +5,16 @@
     top: 10px;
     right: 12px;
     transition: 0.5s;
+    width: 30px;
+    height: 25px;
+    background-color: red;
 }
 
 .first, .second, .third{
     width: 23px;
     height: 3px;
     background-color: rgb(66, 65, 65);
-    margin: 4px 0;
+    margin: 4px auto;
     transition: 0.3s;
 }
 
